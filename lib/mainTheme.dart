@@ -7,8 +7,8 @@ class MainTheme {
     return ThemeData(
       fontFamily: 'Raleway',
       primarySwatch: Colors.pink,
-      accentColor: Colors.amber,
-      canvasColor: Color.fromRGBO(255, 254, 229, 1),
+      accentColor: Colors.lightGreen,
+      canvasColor: Color.fromRGBO(241, 248, 233, 1),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: ThemeData.light().textTheme.copyWith(
             headline6: const TextStyle(
