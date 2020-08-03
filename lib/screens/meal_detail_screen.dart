@@ -4,6 +4,11 @@ import 'package:fominha/models/dummy_data.dart';
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
 
+  final Function toggleFavorite;
+  final Function isFavorite;
+
+  MealDetailScreen(this.toggleFavorite, this.isFavorite);
+
   Widget _buildSectionTitle(ThemeData _theme, String title) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
@@ -84,6 +89,12 @@ class MealDetailScreen extends StatelessWidget {
             )),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          isFavorite(_mealId) ? Icons.star : Icons.star_border,
+        ),
+        onPressed: () => toggleFavorite(_mealId),
       ),
     );
   }
